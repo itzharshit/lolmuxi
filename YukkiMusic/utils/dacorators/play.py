@@ -69,18 +69,7 @@ def PlayWrapper(command):
         if message.chat.id not in checker:
             checker.append(message.chat.id)
             BOT_NAMES = [
-                "YukkiOneBot",
-                "YukkiTwoBot",
-                "YukkiThreeBot",
-                "YukkiFourBot",
-                "YukkiFiveBot",
-                "YukkiSixBot",
-                "YukkiSevenBot",
-                "YukkiEightBot",
-                "YukkiNineBot",
-                "YukkiTenBot",
-                "CheemsMusicRobot",
-                "CheemsVideoBot",
+                "Natashamusic1_bot",
             ]
             if app.username in BOT_NAMES:
                 if message.chat.id != LOG_GROUP_ID:
