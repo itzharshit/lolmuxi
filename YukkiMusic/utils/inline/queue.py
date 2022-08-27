@@ -33,12 +33,14 @@ def queue_markup(
         ]
     ]
     dur = [
-        [
-            InlineKeyboardButton(
-                text=_["QU_B_2"].format(played, dur),
-                callback_data="GetTimer",
-            )
-        ],
+          [
+                InlineKeyboardButton(
+                    text="❰𝙊𝙬𝙣𝙚𝙧❱", url=f"https://t.me/Army0071"
+                ),
+                InlineKeyboardButton(
+                    text="❰𝙂𝙧𝙤𝙪𝙥❱", url=f"https://t.me/World_friends_chatting_group"
+                ),
+            ],
         [
             InlineKeyboardButton(
                 text=_["QU_B_1"],
@@ -50,7 +52,9 @@ def queue_markup(
             ),
         ],
     ]
-    upl = InlineKeyboardMarkup(not_dur if DURATION == "Unknown" else dur)
+    upl = InlineKeyboardMarkup(
+        not_dur if DURATION == "Unknown" else dur
+    )
     return upl
 
 
