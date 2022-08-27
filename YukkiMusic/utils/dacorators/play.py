@@ -54,14 +54,14 @@ def PlayWrapper(command):
                     [
                         [
                             InlineKeyboardButton(
-                                text="🚀 Click Here to Start",
+                                text="🚀 𝘾𝙡𝙞𝙘𝙠 𝙃𝙚𝙧𝙚 𝙩𝙤 𝙎𝙩𝙖𝙧𝙩",
                                 url=f"https://t.me/{app.username}?start=verify",
                             ),
                         ]
                     ]
                 )
                 return await message.reply_text(
-                    "⚠️  Error , Not a Verified User ⚠️\n\nPlease start the bot in Private Message Box First and Then use it.",
+                    "⚠️  𝙀𝙧𝙧𝙤𝙧 , 𝙉𝙤𝙩 𝙖 𝙑𝙚𝙧𝙞𝙛𝙞𝙚𝙙 𝙐𝙨𝙚𝙧 ⚠️/n𝙋𝙡𝙚𝙖𝙨𝙚 𝙨𝙩𝙖𝙧𝙩 𝙩𝙝𝙚 𝙗𝙤𝙩 𝙞𝙣 𝙋𝙧𝙞𝙫𝙖𝙩𝙚 𝙈𝙚𝙨𝙨𝙖𝙜𝙚 𝘽𝙤𝙭 𝙁𝙞𝙧𝙨𝙩 𝙖𝙣𝙙 𝙏𝙝𝙚𝙣 𝙪𝙨𝙚 𝙞𝙩.",
                     reply_markup=upl,
                 )
             else:
@@ -91,7 +91,7 @@ def PlayWrapper(command):
                             if str(name) != str(app.username):
                                 await app.send_message(
                                     message.chat.id,
-                                    text="**Yukki Music Bots Abuse Protection**\n\nPlease maintain the dignity and usage of Yukki Bots, Add only one yukki bot in your chat.\n\nOther Yukki Bots present inside your chat will leave now.... Check status of bots on: @YukkiStatus",
+                                    text="**Ehsaas Music Bots Abuse Protection**\n\nPlease maintain the dignity and usage of Ehsaas Bots, Add only one Ehsaas bot in your chat.\n\nOther Ehsaas Bots present inside your chat will leave now....",
                                 )
                                 try:
                                     from YukkiMusic import userbot
