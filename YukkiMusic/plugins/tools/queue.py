@@ -90,11 +90,11 @@ async def ping_com(client, message: Message, _):
         else:
             IMAGE = get_image(videoid)
     send = (
-        "**⌛️Duration:** Unknown Duration Stream\n\nClick on button below to get whole queued list."
+        "**⌛️𝘿𝙪𝙧𝙖𝙩𝙞𝙤𝙣:** 𝙐𝙣𝙠𝙣𝙤𝙬𝙣 𝘿𝙪𝙧𝙖𝙩𝙞𝙤𝙣 𝙎𝙩𝙧𝙚𝙖𝙢\n\n𝘾𝙡𝙞𝙘𝙠 𝙤𝙣 𝙗𝙪𝙩𝙩𝙤𝙣 𝙗𝙚𝙡𝙤𝙬 𝙩𝙤 𝙜𝙚𝙩 𝙬𝙝𝙤𝙡𝙚 𝙦𝙪𝙚𝙪𝙚𝙙 𝙡𝙞𝙨𝙩."
         if DUR == "Unknown"
-        else "\nClick on button below to get whole queued list."
+        else "\n𝘾𝙡𝙞𝙘𝙠 𝙤𝙣 𝙗𝙪𝙩𝙩𝙤𝙣 𝙗𝙚𝙡𝙤𝙬 𝙩𝙤 𝙜𝙚𝙩 𝙬𝙝𝙤𝙡𝙚 𝙦𝙪𝙚𝙪𝙚𝙙 𝙡𝙞𝙨𝙩."
     )
-    cap = f"""**{config.MUSIC_BOT_NAME} Player**
+    cap = f"""**{config.MUSIC_BOT_NAME} 𝙋𝙡𝙖𝙮𝙚𝙧**
 
 🎥**Playing:** {title}
 
@@ -240,11 +240,11 @@ async def queue_back(client, CallbackQuery: CallbackQuery, _):
         else:
             IMAGE = get_image(videoid)
     send = (
-        "**⌛️Duration:** Unknown Duration Stream\n\nClick on button below to get whole queued list."
+        "**⌛️𝘿𝙪𝙧𝙖𝙩𝙞𝙤𝙣:** 𝙐𝙣𝙠𝙣𝙤𝙬𝙣 𝘿𝙪𝙧𝙖𝙩𝙞𝙤𝙣 𝙎𝙩𝙧𝙚𝙖𝙢\n\n𝘾𝙡𝙞𝙘𝙠 𝙤𝙣 𝙗𝙪𝙩𝙩𝙤𝙣 𝙗𝙚𝙡𝙤𝙬 𝙩𝙤 𝙜𝙚𝙩 𝙬𝙝𝙤𝙡𝙚 𝙦𝙪𝙚𝙪𝙚𝙙 𝙡𝙞𝙨𝙩."
         if DUR == "Unknown"
-        else "\nClick on button below to get whole queued list."
+        else "\n𝘾𝙡𝙞𝙘𝙠 𝙤𝙣 𝙗𝙪𝙩𝙩𝙤𝙣 𝙗𝙚𝙡𝙤𝙬 𝙩𝙤 𝙜𝙚𝙩 𝙬𝙝𝙤𝙡𝙚 𝙦𝙪𝙚𝙪𝙚𝙙 𝙡𝙞𝙨𝙩."
     )
-    cap = f"""**{config.MUSIC_BOT_NAME} Player**
+    cap = f"""**{config.MUSIC_BOT_NAME} 𝙋𝙡𝙖𝙮𝙚𝙧**
 
 🎥**Playing:** {title}
 
