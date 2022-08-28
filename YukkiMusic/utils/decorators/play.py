@@ -41,7 +41,7 @@ def PlayWrapper(command):
                 [
                     [
                         InlineKeyboardButton(
-                            text="How to Fix this? ",
+                            text="𝙃𝙤𝙬 𝙩𝙤 𝙁𝙞𝙭 𝙩𝙝𝙞𝙨?",
                             callback_data="AnonymousAdmin",
                         ),
                     ]
@@ -54,14 +54,14 @@ def PlayWrapper(command):
                     [
                         [
                             InlineKeyboardButton(
-                                text="🚀 Click Here to Start",
+                                text="🚀 𝘾𝙡𝙞𝙘𝙠 𝙃𝙚𝙧𝙚 𝙩𝙤 𝙎𝙩𝙖𝙧𝙩",
                                 url=f"https://t.me/{app.username}?start=verify",
                             ),
                         ]
                     ]
                 )
                 return await message.reply_text(
-                    "⚠️  Error , Not a Verified User ⚠️\n\nPlease start the bot in Private Message Box First and Then use it.",
+                    "⚠️  𝙀𝙧𝙧𝙤𝙧 , 𝙉𝙤𝙩 𝙖 𝙑𝙚𝙧𝙞𝙛𝙞𝙚𝙙 𝙐𝙨𝙚𝙧 ⚠️\n\n𝙋𝙡𝙚𝙖𝙨𝙚 𝙨𝙩𝙖𝙧𝙩 𝙩𝙝𝙚 𝙗𝙤𝙩 𝙞𝙣 𝙋𝙧𝙞𝙫𝙖𝙩𝙚 𝙈𝙚𝙨𝙨𝙖𝙜𝙚 𝘽𝙤𝙭 𝙁𝙞𝙧𝙨𝙩 𝙖𝙣𝙙 𝙏𝙝𝙚𝙣 𝙪𝙨𝙚 𝙞𝙩.",
                     reply_markup=upl,
                 )
             else:
@@ -91,7 +91,7 @@ def PlayWrapper(command):
                             if str(name) != str(app.username):
                                 await app.send_message(
                                     message.chat.id,
-                                    text="**Yukki Music Bots Abuse Protection**\n\nPlease maintain the dignity and usage of Yukki Bots, Add only one yukki bot in your chat.\n\nOther Yukki Bots present inside your chat will leave now.... Check status of bots on: @YukkiStatus",
+                                    text="**Ehsaas Music Bots Abuse Protection**\n\nPlease maintain the dignity and usage of Yukki Bots, Add only one yukki bot in your chat.\n\nOther Yukki Bots present inside your chat will leave now.... Check status of bots on: @YukkiStatus",
                                 )
                                 try:
                                     from YukkiMusic import userbot
@@ -186,7 +186,7 @@ def PlayWrapper(command):
                     get = await app.get_chat_member(chat_id, userbot.id)
                 except ChatAdminRequired:
                     return await message.reply_text(
-                        "Bot requires **Admin** Permission to invite assistant account to your channel."
+                        "𝘽𝙤𝙩 𝙧𝙚𝙦𝙪𝙞𝙧𝙚𝙨 **𝘼𝙙𝙢𝙞𝙣** 𝙋𝙚𝙧𝙢𝙞𝙨𝙨𝙞𝙤𝙣 𝙩𝙤 𝙞𝙣𝙫𝙞𝙩𝙚 𝙖𝙨𝙨𝙞𝙨𝙩𝙖𝙣𝙩 𝙖𝙘𝙘𝙤𝙪𝙣𝙩 𝙩𝙤 𝙮𝙤𝙪𝙧 𝙘𝙝𝙖𝙣𝙣𝙚𝙡"
                     )
                 if get.status == "banned" or get.status == "kicked":
                     upl = InlineKeyboardMarkup(
@@ -200,7 +200,7 @@ def PlayWrapper(command):
                         ]
                     )
                     return await message.reply_text(
-                        f"Assistant is banned in your group or channel, please unban.\n\n**Assistant Username:** @{userbot.username}\n**Assistant ID:** {userbot.id}",
+                        f"𝘼𝙨𝙨𝙞𝙨𝙩𝙖𝙣𝙩 𝙞𝙨 𝙗𝙖𝙣𝙣𝙚𝙙 𝙞𝙣 𝙮𝙤𝙪𝙧 𝙜𝙧𝙤𝙪𝙥 𝙤𝙧 𝙘𝙝𝙖𝙣𝙣𝙚𝙡, 𝙥𝙡𝙚𝙖𝙨𝙚 𝙪𝙣𝙗𝙖𝙣.\n\n**Assistant Username:** @{userbot.username}\n**Assistant ID:** {userbot.id}",
                         reply_markup=upl,
                     )
             except UserNotParticipant:
@@ -219,11 +219,11 @@ def PlayWrapper(command):
                             invitelink = await app.export_chat_invite_link(chat_id)
                         except ChatAdminRequired:
                             return await message.reply_text(
-                                "Bot requires **Invite Users Via Link** Admin Permission to invite assistant account to your chat group.\nPlease give Bot the admin permission."
+                                "𝘽𝙤𝙩 𝙧𝙚𝙦𝙪𝙞𝙧𝙚𝙨 **Invite Users Via Link** 𝘼𝙙𝙢𝙞𝙣 𝙋𝙚𝙧𝙢𝙞𝙨𝙨𝙞𝙤𝙣 𝙩𝙤 𝙞𝙣𝙫𝙞𝙩𝙚 𝙖𝙨𝙨𝙞𝙨𝙩𝙖𝙣𝙩 𝙖𝙘𝙘𝙤𝙪𝙣𝙩 𝙩𝙤 𝙮𝙤𝙪𝙧 𝙘𝙝𝙖𝙩 𝙜𝙧𝙤𝙪𝙥.\n𝙋𝙡𝙚𝙖𝙨𝙚 𝙜𝙞𝙫𝙚 𝘽𝙤𝙩 𝙩𝙝𝙚 𝙖𝙙𝙢𝙞𝙣 𝙥𝙚𝙧𝙢𝙞𝙨𝙨𝙞𝙤𝙣."
                             )
                         except Exception as e:
                             return await message.reply_text(
-                                f"Error Occured While Inviting Assistant Account to your chat.\n\n**Reason**: {e}"
+                                f"𝙀𝙧𝙧𝙤𝙧 𝙊𝙘𝙘𝙪𝙧𝙚𝙙 𝙒𝙝𝙞𝙡𝙚 𝙄𝙣𝙫𝙞𝙩𝙞𝙣𝙜 𝘼𝙨𝙨𝙞𝙨𝙩𝙖𝙣𝙩 𝘼𝙘𝙘𝙤𝙪𝙣𝙩 𝙩𝙤 𝙮𝙤𝙪𝙧 𝙘𝙝𝙖𝙩.\n\n**Reason**: {e}"
                             )
 
                 if invitelink.startswith("https://t.me/+"):
@@ -231,20 +231,20 @@ def PlayWrapper(command):
                         "https://t.me/+", "https://t.me/joinchat/"
                     )
                 myu = await message.reply_text(
-                    "Assistant Account will be joining in 5 Seconds..Please Wait!"
+                    "𝘼𝙨𝙨𝙞𝙨𝙩𝙖𝙣𝙩 𝘼𝙘𝙘𝙤𝙪𝙣𝙩 𝙬𝙞𝙡𝙡 𝙗𝙚 𝙟𝙤𝙞𝙣𝙞𝙣𝙜 𝙞𝙣 5 𝙎𝙚𝙘𝙤𝙣𝙙𝙨..𝙋𝙡𝙚𝙖𝙨𝙚 𝙒𝙖𝙞𝙩...!"
                 )
                 try:
                     await asyncio.sleep(5)
                     await userbot.join_chat(invitelink)
                     await asyncio.sleep(2)
                     await myu.edit(
-                        f"Assistant Account[{userbot.name}] Joined Successfully.\n\nStarting Music Now"
+                        f"𝘼𝙨𝙨𝙞𝙨𝙩𝙖𝙣𝙩 𝘼𝙘𝙘𝙤𝙪𝙣𝙩[{userbot.name}] 𝙅𝙤𝙞𝙣𝙚𝙙 𝙎𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮.\n\n𝙎𝙩𝙖𝙧𝙩𝙞𝙣𝙜 𝙈𝙪𝙨𝙞𝙘 𝙉𝙤𝙬"
                     )
                 except UserAlreadyParticipant:
                     pass
                 except Exception as e:
                     return await message.reply_text(
-                        f"Error Occured While Inviting Assistant Account to your chat.\n\n**Reason**: {e}"
+                        f"𝙀𝙧𝙧𝙤𝙧 𝙊𝙘𝙘𝙪𝙧𝙚𝙙 𝙒𝙝𝙞𝙡𝙚 𝙄𝙣𝙫𝙞𝙩𝙞𝙣𝙜 𝘼𝙨𝙨𝙞𝙨𝙩𝙖𝙣𝙩 𝘼𝙘𝙘𝙤𝙪𝙣𝙩 𝙩𝙤 𝙮𝙤𝙪𝙧 𝙘𝙝𝙖𝙩.\n\n**Reason**: {e}"
                     )
 
                 links[chat_id] = invitelink
