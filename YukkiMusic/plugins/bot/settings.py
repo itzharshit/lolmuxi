@@ -166,7 +166,7 @@ async def without_Admin_rights(client, CallbackQuery, _):
     if command == "VOTEANSWER":
         try:
             return await CallbackQuery.answer(
-                "When this mode is enabled, People without admin rights can use admin commands after a certain amount of votes.",
+                "𝙒𝙝𝙚𝙣 𝙩𝙝𝙞𝙨 𝙢𝙤𝙙𝙚 𝙞𝙨 𝙚𝙣𝙖𝙗𝙡𝙚𝙙, 𝙋𝙚𝙤𝙥𝙡𝙚 𝙬𝙞𝙩𝙝𝙤𝙪𝙩 𝙖𝙙𝙢𝙞𝙣 𝙧𝙞𝙜𝙝𝙩𝙨 𝙘𝙖𝙣 𝙪𝙨𝙚 𝙖𝙙𝙢𝙞𝙣 𝙘𝙤𝙢𝙢𝙖𝙣𝙙𝙨 𝙖𝙛𝙩𝙚𝙧 𝙖 𝙘𝙚𝙧𝙩𝙖𝙞𝙣 𝙖𝙢𝙤𝙪𝙣𝙩 𝙤𝙛 𝙫𝙤𝙩𝙚𝙨.",
                 show_alert=True,
             )
         except:
@@ -175,7 +175,7 @@ async def without_Admin_rights(client, CallbackQuery, _):
         current = await get_upvote_count(CallbackQuery.message.chat.id)
         try:
             return await CallbackQuery.answer(
-                f"Current UpVotes required for using admin commands are : \n\n{current}",
+                f"𝘾𝙪𝙧𝙧𝙚𝙣𝙩 𝙐𝙥𝙑𝙤𝙩𝙚𝙨 𝙧𝙚𝙦𝙪𝙞𝙧𝙚𝙙 𝙛𝙤𝙧 𝙪𝙨𝙞𝙣𝙜 𝙖𝙙𝙢𝙞𝙣 𝙘𝙤𝙢𝙢𝙖𝙣𝙙𝙨 𝙖𝙧𝙚 : \n\n{current}",
                 show_alert=True,
             )
         except:
@@ -265,7 +265,7 @@ async def addition(client, CallbackQuery, _):
         print(final)
         if final == 0:
             return await CallbackQuery.answer(
-                "Lowest upvotes count can be 2. You can't set below 2",
+                "𝙇𝙤𝙬𝙚𝙨𝙩 𝙪𝙥𝙫𝙤𝙩𝙚𝙨 𝙘𝙤𝙪𝙣𝙩 𝙘𝙖𝙣 𝙗𝙚 2. 𝙔𝙤𝙪 𝙘𝙖𝙣'𝙩 𝙨𝙚𝙩 𝙗𝙚𝙡𝙤𝙬 2",
                 show_alert=True,
             )
         if final <= 2:
@@ -276,7 +276,7 @@ async def addition(client, CallbackQuery, _):
         print(final)
         if final == 17:
             return await CallbackQuery.answer(
-                "Highest upvotes count can be 15. You can't set above 15",
+                "𝙃𝙞𝙜𝙝𝙚𝙨𝙩 𝙪𝙥𝙫𝙤𝙩𝙚𝙨 𝙘𝙤𝙪𝙣𝙩 𝙘𝙖𝙣 𝙗𝙚 15. 𝙔𝙤𝙪 𝙘𝙖𝙣'𝙩 𝙨𝙚𝙩 𝙖𝙗𝙤𝙫𝙚 15",
                 show_alert=True,
             )
         if final >= 15:
