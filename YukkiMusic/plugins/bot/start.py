@@ -44,7 +44,7 @@ async def start_comm(client, message: Message, _):
         name = message.text.split(None, 1)[1]
         if name[0:4] == "veri":
             return await message.reply_text(
-                "Thank You for starting me in Private Message Box. You are now verified. Please go back and start using the bot."
+                "𝙏𝙝𝙖𝙣𝙠 𝙔𝙤𝙪 𝙛𝙤𝙧 𝙨𝙩𝙖𝙧𝙩𝙞𝙣𝙜 𝙢𝙚 𝙞𝙣 𝙋𝙧𝙞𝙫𝙖𝙩𝙚 𝙈𝙚𝙨𝙨𝙖𝙜𝙚 𝘽𝙤𝙭. 𝙔𝙤𝙪 𝙖𝙧𝙚 𝙣𝙤𝙬 𝙫𝙚𝙧𝙞𝙛𝙞𝙚𝙙. 𝙋𝙡𝙚𝙖𝙨𝙚 𝙜𝙤 𝙗𝙖𝙘𝙠 𝙖𝙣𝙙 𝙨𝙩𝙖𝙧𝙩 𝙪𝙨𝙞𝙣𝙜 𝙩𝙝𝙚 𝙗𝙤𝙩."
             )
         if name[0:4] == "help":
             keyboard = help_pannel(_)
@@ -87,9 +87,9 @@ async def start_comm(client, message: Message, _):
                     details = stats.get(vidid)
                     title = (details["title"][:35]).title()
                     if vidid == "telegram":
-                        msg += f"🔗[Telegram Files and Audios](https://t.me/telegram) ** played {count} times**\n\n"
+                        msg += f"🔗[𝙏𝙚𝙡𝙚𝙜𝙧𝙖𝙢 𝙁𝙞𝙡𝙚𝙨 𝙖𝙣𝙙 𝘼𝙪𝙙𝙞𝙤𝙨](https://t.me/telegram) ** 𝙥𝙡𝙖𝙮𝙚𝙙 {count} 𝙩𝙞𝙢𝙚𝙨**\n\n"
                     else:
-                        msg += f"🔗 [{title}](https://www.youtube.com/watch?v={vidid}) ** played {count} times**\n\n"
+                        msg += f"🔗 [{title}](https://www.youtube.com/watch?v={vidid}) ** 𝙥𝙡𝙖𝙮𝙚𝙙 {count} 𝙩𝙞𝙢𝙚𝙨**\n\n"
                 msg = _["ustats_2"].format(tot, tota, limit) + msg
                 return videoid, msg
 
@@ -170,7 +170,7 @@ async def start_comm(client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"{message.from_user.mention} has just started bot to check <code>VIDEO INFORMATION</code>\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
+                    f"{message.from_user.mention} 𝙝𝙖𝙨 𝙟𝙪𝙨𝙩 𝙨𝙩𝙖𝙧𝙩𝙚𝙙 𝙗𝙤𝙩 𝙩𝙤 𝙘𝙝𝙚𝙘𝙠 <code>VIDEO INFORMATION</code>\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
                 )
     else:
         try:
@@ -201,7 +201,7 @@ async def start_comm(client, message: Message, _):
             sender_name = message.from_user.first_name
             return await app.send_message(
                 config.LOG_GROUP_ID,
-                f"{message.from_user.mention} has just started Bot.\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
+                f"{message.from_user.mention} 𝙝𝙖𝙨 𝙟𝙪𝙨𝙩 𝙨𝙩𝙖𝙧𝙩𝙚𝙙 𝙗𝙤𝙩.\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
             )
 
 
@@ -230,7 +230,7 @@ async def welcome(client, message: Message):
     if config.PRIVATE_BOT_MODE == str(True):
         if not await is_served_private_chat(message.chat.id):
             await message.reply_text(
-                "**Private Music Bot**\n\nOnly for authorized chats from the owner. Ask my owner to allow your chat first."
+                "**𝙋𝙧𝙞𝙫𝙖𝙩𝙚 𝙈𝙪𝙨𝙞𝙘 𝘽𝙤𝙩**\n\n𝙊𝙣𝙡𝙮 𝙛𝙤𝙧 𝙖𝙪𝙩𝙝𝙤𝙧𝙞𝙯𝙚𝙙 𝙘𝙝𝙖𝙩𝙨 𝙛𝙧𝙤𝙢 𝙩𝙝𝙚 𝙤𝙬𝙣𝙚𝙧. 𝘼𝙨𝙠 𝙢𝙮 𝙤𝙬𝙣𝙚𝙧 𝙩𝙤 𝙖𝙡𝙡𝙤𝙬 𝙮𝙤𝙪𝙧 𝙘𝙝𝙖𝙩 𝙛𝙞𝙧𝙨𝙩."
             )
             return await app.leave_chat(message.chat.id)
     else:
@@ -243,7 +243,7 @@ async def welcome(client, message: Message):
                 try:
                     await message.chat.ban_member(member.id)
                     await message.reply_text(
-                        "This user is globally banned and marked as potential scammer or spammer, Thus banned."
+                        "𝙏𝙝𝙞𝙨 𝙪𝙨𝙚𝙧 𝙞𝙨 𝙜𝙡𝙤𝙗𝙖𝙡𝙡𝙮 𝙗𝙖𝙣𝙣𝙚𝙙 𝙖𝙣𝙙 𝙢𝙖𝙧𝙠𝙚𝙙 𝙖𝙨 𝙥𝙤𝙩𝙚𝙣𝙩𝙞𝙖𝙡 𝙨𝙘𝙖𝙢𝙢𝙚𝙧 𝙤𝙧 𝙨𝙥𝙖𝙢𝙢𝙚𝙧, 𝙏𝙝𝙪𝙨 𝙗𝙖𝙣𝙣𝙚𝙙."
                     )
                 except:
                     pass
@@ -259,18 +259,7 @@ async def welcome(client, message: Message):
                     return await app.leave_chat(chat_id)
                 if chat_id != config.LOG_GROUP_ID:
                     BOT_NAMES = [
-                        "YukkiOneBot",
-                        "YukkiTwoBot",
-                        "YukkiThreeBot",
-                        "YukkiFourBot",
-                        "YukkiFiveBot",
-                        "YukkiSixBot",
-                        "YukkiSevenBot",
-                        "YukkiEightBot",
-                        "YukkiNineBot",
-                        "YukkiTenBot",
-                        "CheemsMusicRobot",
-                        "CheemsVideoBot",
+                        "Pyrogrammers",
                     ]
                     if app.username in BOT_NAMES:
                         bots = await app.get_chat_members(message.chat.id, filter="bots")
@@ -280,7 +269,7 @@ async def welcome(client, message: Message):
                                 if str(name) != str(app.username):
                                     await app.send_message(
                                         chat_id,
-                                        text="**Yukki Music Bots Abuse Protection**\n\nPlease maintain the dignity and usage of Yukki Bots, Add only one yukki bot in your chat.\n\nOther Yukki Bots present inside your chat will leave now.... Check status of bots on: @YukkiStatus",
+                                        text="**𝙀𝙝𝙨𝙖𝙖𝙨 𝙈𝙪𝙨𝙞𝙘 𝘽𝙤𝙩𝙨 𝘼𝙗𝙪𝙨𝙚 𝙋𝙧𝙤𝙩𝙚𝙘𝙩𝙞𝙤𝙣**\n\n𝙋𝙡𝙚𝙖𝙨𝙚 𝙢𝙖𝙞𝙣𝙩𝙖𝙞𝙣 𝙩𝙝𝙚 𝙙𝙞𝙜𝙣𝙞𝙩𝙮 𝙖𝙣𝙙 𝙪𝙨𝙖𝙜𝙚 𝙤𝙛 𝙀𝙝𝙨𝙖𝙖𝙨 𝘽𝙤𝙩𝙨, 𝘼𝙙𝙙 𝙤𝙣𝙡𝙮 𝙤𝙣𝙚 𝙀𝙝𝙨𝙖𝙖𝙨 𝙗𝙤𝙩 𝙞𝙣 𝙮𝙤𝙪𝙧 𝙘𝙝𝙖𝙩.\n\n𝙊𝙩𝙝𝙚𝙧 𝙀𝙝𝙨𝙖𝙖𝙨 𝘽𝙤𝙩𝙨 𝙥𝙧𝙚𝙨𝙚𝙣𝙩 𝙞𝙣𝙨𝙞𝙙𝙚 𝙮𝙤𝙪𝙧 𝙘𝙝𝙖𝙩 𝙬𝙞𝙡𝙡 𝙡𝙚𝙖𝙫𝙚 𝙣𝙤𝙬....",
                                     )
                                     try:
                                         from YukkiMusic import userbot
