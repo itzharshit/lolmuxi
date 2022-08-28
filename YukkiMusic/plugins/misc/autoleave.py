@@ -72,7 +72,7 @@ async def auto_end():
                 try:
                     await app.send_message(
                         chat_id,
-                        "Bot has left voice chat as it was muted for more than 3 mins in voice chat. Please respect the bot and don't abuse it by playing music on mute.",
+                        "𝘽𝙤𝙩 𝙝𝙖𝙨 𝙡𝙚𝙛𝙩 𝙫𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩 𝙖𝙨 𝙞𝙩 𝙬𝙖𝙨 𝙢𝙪𝙩𝙚𝙙 𝙛𝙤𝙧 𝙢𝙤𝙧𝙚 𝙩𝙝𝙖𝙣 3 𝙢𝙞𝙣𝙨 𝙞𝙣 𝙫𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩. 𝙋𝙡𝙚𝙖𝙨𝙚 𝙧𝙚𝙨𝙥𝙚𝙘𝙩 𝙩𝙝𝙚 𝙗𝙤𝙩 𝙖𝙣𝙙 𝙙𝙤𝙣'𝙩 𝙖𝙗𝙪𝙨𝙚 𝙞𝙩 𝙗𝙮 𝙥𝙡𝙖𝙮𝙞𝙣𝙜 𝙢𝙪𝙨𝙞𝙘 𝙤𝙣 𝙢𝙪𝙩𝙚.",
                     )
                 except:
                     continue
@@ -95,7 +95,7 @@ async def auto_end():
                 try:
                     await app.send_message(
                         chat_id,
-                        "Bot has left voice chat due to inactivity to avoid overload on servers. No-one was listening to the bot on voice chat.",
+                        "𝘽𝙤𝙩 𝙝𝙖𝙨 𝙡𝙚𝙛𝙩 𝙫𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩 𝙙𝙪𝙚 𝙩𝙤 𝙞𝙣𝙖𝙘𝙩𝙞𝙫𝙞𝙩𝙮 𝙩𝙤 𝙖𝙫𝙤𝙞𝙙 𝙤𝙫𝙚𝙧𝙡𝙤𝙖𝙙 𝙤𝙣 𝙨𝙚𝙧𝙫𝙚𝙧𝙨. 𝙉𝙤-𝙤𝙣𝙚 𝙬𝙖𝙨 𝙡𝙞𝙨𝙩𝙚𝙣𝙞𝙣𝙜 𝙩𝙤 𝙩𝙝𝙚 𝙗𝙤𝙩 𝙤𝙣 𝙫𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩.",
                     )
                 except:
                     continue
