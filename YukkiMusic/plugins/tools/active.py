@@ -23,7 +23,7 @@ ACTIVEVIDEO_COMMAND = get_command("ACTIVEVIDEO_COMMAND")
 
 @app.on_message(filters.command(ACTIVEVC_COMMAND) & SUDOERS)
 async def activevc(_, message: Message):
-    mystic = await message.reply_text("Getting active voice chats.. Please hold")
+    mystic = await message.reply_text("𝙂𝙚𝙩𝙩𝙞𝙣𝙜 𝙖𝙘𝙩𝙞𝙫𝙚 𝙫𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩𝙨.. 𝙋𝙡𝙚𝙖𝙨𝙚 𝙝𝙤𝙡𝙙")
     served_chats = await get_active_chats()
     text = ""
     j = 0
@@ -42,14 +42,14 @@ async def activevc(_, message: Message):
         await mystic.edit_text("No Active Voice Chats")
     else:
         await mystic.edit_text(
-            f"**Active Voice Chats:-**\n\n{text}",
+            f"**𝘼𝙘𝙩𝙞𝙫𝙚 𝙑𝙤𝙞𝙘𝙚 𝘾𝙝𝙖𝙩𝙨:-**\n\n{text}",
             disable_web_page_preview=True,
         )
 
 
 @app.on_message(filters.command(ACTIVEVIDEO_COMMAND) & SUDOERS)
 async def activevi_(_, message: Message):
-    mystic = await message.reply_text("Getting active video chats.. Please hold")
+    mystic = await message.reply_text("𝙂𝙚𝙩𝙩𝙞𝙣𝙜 𝙖𝙘𝙩𝙞𝙫𝙚 𝙫𝙞𝙙𝙚𝙤 𝙘𝙝𝙖𝙩𝙨.. 𝙋𝙡𝙚𝙖𝙨𝙚 𝙝𝙤𝙡𝙙")
     served_chats = await get_active_video_chats()
     text = ""
     j = 0
@@ -65,7 +65,7 @@ async def activevi_(_, message: Message):
             text += f"<b>{j + 1}. {title}</b> [`{x}`]\n"
         j += 1
     if not text:
-        await mystic.edit_text("No Active Voice Chats")
+        await mystic.edit_text("𝙉𝙤 𝘼𝙘𝙩𝙞𝙫𝙚 𝙑𝙤𝙞𝙘𝙚 𝘾𝙝𝙖𝙩𝙨")
     else:
         await mystic.edit_text(
             f"**Active Video Calls:-**\n\n{text}",
