@@ -92,13 +92,13 @@ async def braodcast_message(client, message, _):
         try:
             await app.send_message(
                 config.LOG_GROUP_ID,
-                f"{message.from_user.mention} is using broadcast command now in {message.chat.title}",
+                f"{message.from_user.mention} 𝗶𝘀 𝘂𝘀𝗶𝗻𝗴 𝗯𝗿𝗼𝗮𝗱𝗰𝗮𝘀𝘁 𝗰𝗼𝗺𝗺𝗮𝗻𝗱 𝗻𝗼𝘄 𝗶𝗻 {message.chat.title}",
             )
         except:
             pass
 
     await message.reply_text(
-        "Started Broadcasting, if its a forwarded message broadcast don't delete the original message. broadcast won't work!"
+        "𝙎𝙩𝙖𝙧𝙩𝙚𝙙 𝘽𝙧𝙤𝙖𝙙𝙘𝙖𝙨𝙩𝙞𝙣𝙜, 𝙞𝙛 𝙞𝙩𝙨 𝙖 𝙛𝙤𝙧𝙬𝙖𝙧𝙙𝙚𝙙 𝙢𝙚𝙨𝙨𝙖𝙜𝙚 𝙗𝙧𝙤𝙖𝙙𝙘𝙖𝙨𝙩 𝙙𝙤𝙣'𝙩 𝙙𝙚𝙡𝙚𝙩𝙚 𝙩𝙝𝙚 𝙤𝙧𝙞𝙜𝙞𝙣𝙖𝙡 𝙢𝙚𝙨𝙨𝙖𝙜𝙚. 𝙗𝙧𝙤𝙖𝙙𝙘𝙖𝙨𝙩 𝙬𝙤𝙣'𝙩 𝙬𝙤𝙧𝙠!"
     )
 
     # Bot broadcast inside chats
