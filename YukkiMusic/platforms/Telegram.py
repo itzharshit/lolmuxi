@@ -140,7 +140,7 @@ class TeleAPI:
                 completed_size = convert_bytes(current)
                 speed = convert_bytes(speed)
                 text = f"""
-**{MUSIC_BOT_NAME} Telegram Media Downloader**
+**{MUSIC_BOT_NAME} 𝙏𝙚𝙡𝙚𝙜𝙧𝙖𝙢 𝙢𝙚𝙙𝙞𝙖 𝙙𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙚𝙧**
 
 **Total FileSize:** {total_size}
 **Completed:** {completed_size} 
@@ -175,7 +175,7 @@ class TeleAPI:
                 except:
                     elapsed = "0 seconds"
                 await mystic.edit_text(
-                    f"Successfully Downloaded.. Processing file now\n\n**Time Elapsed : {elapsed}"
+                    f"𝙎𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙚𝙙.. 𝙋𝙧𝙤𝙘𝙚𝙨𝙨𝙞𝙣𝙜 𝙛𝙞𝙡𝙚 𝙣𝙤𝙬\n\n**𝙏𝙞𝙢𝙚 𝙀𝙡𝙖𝙥𝙨𝙚𝙙 : {elapsed}"
                 )
             except:
                 await mystic.edit_text(_["tg_2"])
