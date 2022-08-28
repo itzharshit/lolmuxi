@@ -92,7 +92,6 @@ async def del_back_playlist(client, CallbackQuery, _):
         if str(speed) == str("1.0"):
             return await CallbackQuery.answer(
                 f"𝙎𝙤𝙧𝙧𝙮! 𝘽𝙪𝙩 𝙗𝙤𝙩 𝙞𝙨 𝙖𝙡𝙧𝙚𝙖𝙙𝙮 𝙥𝙡𝙖𝙮𝙞𝙣𝙜 𝙤𝙣 𝙉𝙤𝙧𝙢𝙖𝙡 𝙎𝙥𝙚𝙚𝙙.\n\n𝙎𝙚𝙡𝙚𝙘𝙩 𝙖𝙣𝙮 𝙤𝙩𝙝𝙚𝙧 𝙨𝙥𝙚𝙚𝙙.",
-.",
                 show_alert=True,
             )
     if chat_id in checker:
