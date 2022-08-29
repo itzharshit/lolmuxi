@@ -168,24 +168,24 @@ async def del_back_playlist(client, CallbackQuery, _):
             try:
                 if current["vidid"] != exists["vidid"]:
                     return await CallbackQuery.edit_message.text(
-                        "𝙎𝙤𝙧𝙧𝙮, 𝘽𝙪𝙩 𝙩𝙝𝙞𝙨 𝙫𝙤𝙩𝙞𝙣𝙜 𝙝𝙖𝙨 𝙚𝙣𝙙𝙚𝙙 𝙖𝙨 𝙩𝙧𝙖𝙘𝙠 𝙛𝙤𝙧 𝙬𝙝𝙞𝙘𝙝 𝙫𝙤𝙞𝙣𝙜 𝙬𝙖𝙨 𝙜𝙤𝙞𝙣𝙜 𝙤𝙣 𝙞𝙨 𝙛𝙞𝙣𝙞𝙨𝙝𝙚𝙙."
+                        "Sorry, But this voting has ended as track for which voing was going on is finished."
                     )
                 if current["file"] != exists["file"]:
                     return await CallbackQuery.edit_message.text(
-                        "𝙎𝙤𝙧𝙧𝙮, 𝘽𝙪𝙩 𝙩𝙝𝙞𝙨 𝙫𝙤𝙩𝙞𝙣𝙜 𝙝𝙖𝙨 𝙚𝙣𝙙𝙚𝙙 𝙖𝙨 𝙩𝙧𝙖𝙘𝙠 𝙛𝙤𝙧 𝙬𝙝𝙞𝙘𝙝 𝙫𝙤𝙩𝙞𝙣𝙜 𝙬𝙖𝙨 𝙜𝙤𝙞𝙣𝙜 𝙤𝙣 𝙞𝙨 𝙛𝙞𝙣𝙞𝙨𝙝𝙚𝙙."
+                        "Sorry, But this voting has ended as track for which voing was going on is finished."
                     )
             except:
                 return await CallbackQuery.edit_message_text(
-                    f"𝙁𝙖𝙞𝙡𝙚𝙙 𝙩𝙤 𝙥𝙚𝙧𝙛𝙤𝙧𝙢 𝙖𝙘𝙩𝙞𝙤𝙣 𝙖𝙨 𝙢𝙪𝙨𝙞𝙘 𝙛𝙤𝙧 𝙬𝙝𝙞𝙘𝙝 𝙫𝙤𝙩𝙞𝙣𝙜 𝙬𝙖𝙨 𝙝𝙖𝙥𝙥𝙚𝙣𝙞𝙣𝙜 𝙞𝙨 𝙚𝙞𝙩𝙝𝙚𝙧 𝙛𝙞𝙣𝙞𝙨𝙝𝙚𝙙 𝙤𝙧 𝙨𝙩𝙤𝙥𝙥𝙚𝙙."
+                    f"Failed to perform action as music for which voting was happening is either finished or stopped."
                 )
             try:
                 await CallbackQuery.edit_message_text(
-                    f"𝙂𝙤𝙩 **{upvote}**𝙐𝙥𝙫𝙤𝙩𝙚𝙨 𝙨𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮."
+                    f"Got **{upvote}** Upvotes successfully."
                 )
             except:
                 pass
             command = counter
-            mention = "**𝙐𝙥𝙫𝙤𝙩𝙚𝙨**"
+            mention = "**Upvotes**"
         else:
             if (
                 CallbackQuery.from_user.id
@@ -260,7 +260,7 @@ async def del_back_playlist(client, CallbackQuery, _):
         total = len(check)
         if total <= 2:
             return await CallbackQuery.answer(
-                f"𝘼𝙩𝙡𝙚𝙖𝙨𝙩 2 𝙩𝙧𝙖𝙘𝙠𝙨 𝙣𝙚𝙚𝙙𝙚𝙙 𝙞𝙣 𝙦𝙪𝙚𝙪𝙚 𝙩𝙤 𝙨𝙝𝙪𝙛𝙛𝙡𝙚 𝙗𝙚𝙩𝙬𝙚𝙚𝙣 𝙩𝙝𝙚𝙢.\n\n{total - 1} 𝙩𝙧𝙖𝙘𝙠 𝙥𝙧𝙚𝙨𝙚𝙣𝙩.",
+                f"Atleast 2 tracks needed in queue to shuffle between them.\n\n{total - 1} track present.",
                 show_alert=True,
             )
         try:
@@ -473,7 +473,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             if (duration_played - duration_to_skip) <= 10:
                 bet = seconds_to_min(duration_played)
                 return await CallbackQuery.answer(
-                    f"𝘽𝙤𝙩 𝙞𝙨 𝙣𝙤𝙩 𝙖𝙗𝙡𝙚 𝙩𝙤 𝙨𝙚𝙚𝙠 𝙙𝙪𝙚 𝙩𝙤 𝙩𝙤𝙩𝙖𝙡 𝙙𝙪𝙧𝙖𝙩𝙞𝙤𝙣 𝙝𝙖𝙨 𝙗𝙚𝙚𝙣 𝙚𝙭𝙘𝙚𝙚𝙙𝙚𝙙.\n\n𝘾𝙪𝙧𝙧𝙚𝙣𝙩𝙡𝙮 𝙥𝙡𝙖𝙮𝙚𝙙** {bet}** 𝙢𝙞𝙣𝙨 𝙤𝙪𝙩 𝙤𝙛 **{duration}** 𝙢𝙞𝙣𝙨",
+                    f"Bot is not able to seek due to total duration has been exceeded.\n\nCurrently played** {bet}** mins out of **{duration}** mins",
                     show_alert=True,
                 )
             to_seek = duration_played - duration_to_skip + 1
@@ -481,7 +481,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             if (duration_seconds - (duration_played + duration_to_skip)) <= 10:
                 bet = seconds_to_min(duration_played)
                 return await CallbackQuery.answer(
-                    f"𝘽𝙤𝙩 𝙞𝙨 𝙣𝙤𝙩 𝙖𝙗𝙡𝙚 𝙩𝙤 𝙨𝙚𝙚𝙠 𝙙𝙪𝙚 𝙩𝙤 𝙩𝙤𝙩𝙖𝙡 𝙙𝙪𝙧𝙖𝙩𝙞𝙤𝙣 𝙝𝙖𝙨 𝙗𝙚𝙚𝙣 𝙚𝙭𝙘𝙚𝙚𝙙𝙚𝙙.\n\n𝘾𝙪𝙧𝙧𝙚𝙣𝙩𝙡𝙮 𝙥𝙡𝙖𝙮𝙚𝙙** {bet}** 𝙢𝙞𝙣𝙨 𝙤𝙪𝙩 𝙤𝙛 **{duration}** 𝙢𝙞𝙣𝙨",
+                    f"Bot is not able to seek due to total duration has been exceeded.\n\nCurrently played** {bet}** mins out of **{duration}** mins",
                     show_alert=True,
                 )
             to_seek = duration_played + duration_to_skip + 1
@@ -527,10 +527,10 @@ async def jump_panel(client, CallbackQuery, _):
     count = len(check)
     if count == 1:
         return await CallbackQuery.answer(
-            "𝙉𝙤 𝙩𝙧𝙖𝙘𝙠𝙨 𝙖𝙙𝙙𝙚𝙙 𝙞𝙣 𝙦𝙪𝙚𝙪𝙚 𝙩𝙤 𝙅𝙪𝙢𝙥", show_alert=True
+            "No tracks added in queue to Jump", show_alert=True
         )
     await CallbackQuery.answer(
-        "𝘾𝙡𝙞𝙘𝙠 𝙤𝙣 𝙩𝙝𝙚 𝙏𝙞𝙩𝙡𝙚 𝙗𝙪𝙩𝙩𝙤𝙣𝙨 𝙩𝙤 𝙬𝙝𝙞𝙘𝙝 𝙮𝙤𝙪 𝙬𝙖𝙣𝙩 𝙩𝙤 𝙟𝙪𝙢𝙥.\n\n𝘽𝙤𝙩 𝙬𝙞𝙡𝙡 𝙟𝙪𝙢𝙥 𝙩𝙤 𝙩𝙝𝙖𝙩 𝙢𝙪𝙨𝙞𝙘 𝙬𝙞𝙩𝙝𝙤𝙪𝙩 𝙙𝙞𝙨𝙩𝙪𝙧𝙗𝙞𝙣𝙜 𝙦𝙪𝙚𝙪𝙚.",
+        "Click on the Title buttons to which you want to jump.\n\nBot will jump to that music without disturbing queue.",
         show_alert=True,
     )
     if count >= 7:
