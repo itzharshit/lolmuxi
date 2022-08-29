@@ -302,11 +302,11 @@ async def play_commnd(
                 await Yukki.stream_call(url)
             except NoActiveGroupCall:
                 await mystic.edit_text(
-                    "𝙏𝙝𝙚𝙧𝙚'𝙨 𝙖𝙣 𝙞𝙨𝙨𝙪𝙚 𝙬𝙞𝙩𝙝 𝙩𝙝𝙚 𝙗𝙤𝙩. 𝙋𝙡𝙚𝙖𝙨𝙚 𝙧𝙚𝙥𝙤𝙧𝙩 𝙞𝙩 𝙩𝙤 𝙢𝙮 𝙤𝙬𝙣𝙚𝙧 𝙖𝙣𝙙 𝙖𝙨𝙠 𝙩𝙝𝙚𝙢 𝙩𝙤 𝙘𝙝𝙚𝙘𝙠 𝙡𝙤𝙜𝙜𝙚𝙧 𝙜𝙧𝙤𝙪𝙥."
+                    "There's an issue with the bot. Please report it to my owner and ask them to check logger group."
                 )
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    "𝙋𝙡𝙚𝙖𝙨𝙚 𝙩𝙪𝙧𝙣 𝙤𝙣 𝙑𝙤𝙞𝙘𝙚 𝘾𝙝𝙖𝙩.. 𝘽𝙤𝙩 𝙞𝙨 𝙣𝙤𝙩 𝙖𝙗𝙡𝙚 𝙩𝙤 𝙨𝙩𝙧𝙚𝙖𝙢 𝙪𝙧𝙡𝙨..",
+                    "Please turn on Voice Chat.. Bot is not able to stream urls..",
                 )
             except Exception as e:
                 return await mystic.edit_text(_["general_3"].format(type(e).__name__))
@@ -521,7 +521,7 @@ async def play_music(client, CallbackQuery, _):
 async def anonymous_check(client, CallbackQuery):
     try:
         await CallbackQuery.answer(
-            "𝙔𝙤𝙪'𝙧𝙚 𝙖𝙣 𝘼𝙣𝙤𝙣𝙮𝙢𝙤𝙪𝙨 𝘼𝙙𝙢𝙞𝙣\n\n𝙂𝙤 𝙩𝙤 𝙮𝙤𝙪𝙧 𝙜𝙧𝙤𝙪𝙥'𝙨 𝙨𝙚𝙩𝙩𝙞𝙣𝙜 \n-> 𝘼𝙙𝙢𝙞𝙣𝙞𝙨𝙩𝙧𝙖𝙩𝙤𝙧𝙨 𝙇𝙞𝙨𝙩 \n-> 𝘾𝙡𝙞𝙘𝙠 𝙤𝙣 𝙮𝙤𝙪𝙧 𝙣𝙖𝙢𝙚 \n-> 𝙪𝙣𝙘𝙝𝙚𝙘𝙠 𝙍𝙀𝙈𝘼𝙄𝙉 𝘼𝙉𝙊𝙉𝙔𝙈𝙊𝙐𝙎 𝙗𝙪𝙩𝙩𝙤𝙣 𝙩𝙝𝙚𝙧𝙚.",
+            "You're an Anonymous Admin\n\nGo to your group's setting \n-> Administrators List \n-> Click on your name \n-> uncheck REMAIN ANONYMOUS button there.",
             show_alert=True,
         )
     except:
