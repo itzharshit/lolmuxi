@@ -33,7 +33,7 @@ def start_pannel(_):
 
                     InlineKeyboardButton(
 
-                        "❰𝗚𝗿𝗼𝘂𝗽❱", url=f"https://t.me/World_friends_chatting_group"
+                        "❰𝗚𝗿𝗼𝘂𝗽❱", url=f"https://t.me/World_friends_chatting_zone"
 
                     ),
 
@@ -77,7 +77,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
 
                     InlineKeyboardButton(
 
-                        "❰𝗚𝗿𝗼𝘂𝗽❱", url=f"https://t.me/World_friends_chatting_group"
+                        "❰𝗚𝗿𝗼𝘂𝗽❱", url=f"https://t.me/World_friends_chatting_zone"
 
                     ),
 
