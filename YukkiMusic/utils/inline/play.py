@@ -101,16 +101,19 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
     return buttons
 
 
-def stream_markup(_, videoid):
+def stream_markup(_, videoid, chat_id):
     buttons = [
-       [
-                InlineKeyboardButton(
-                    text="❰𝙊𝙬𝙣𝙚𝙧❱", url=f"https://t.me/Army0071"
-                ),
-                InlineKeyboardButton(
-                    text="❰𝙂𝙧𝙤𝙪𝙥❱", url=f"https://t.me/World_friends_chatting_group"
-                ),
-            ],
+        [
+            InlineKeyboardButton(
+                text=_["PL_B_2"],
+                callback_data=f"add_playlist {videoid}",
+            ),
+            InlineKeyboardButton(
+                text=_["PL_B_3"],
+                callback_data=f"PanelMarkup {videoid}|{chat_id}",
+            ),
+        ],
+        [InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close")],
     ]
     return buttons
 
