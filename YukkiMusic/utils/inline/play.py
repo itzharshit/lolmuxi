@@ -96,12 +96,12 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 url=f"https://t.me/World_friends_chatting_zone"
             ),
             ],
-        [
-            InlineKeyboardButton(
-                text="❰𝘿𝙊𝙉𝘼𝙏𝙀❱",
-                url=f"https://payu.in/web/B929AE5F10F28A6E751AA02D7458EDEA"
-            )
-        ],
+#        [
+#            InlineKeyboardButton(
+#                text="❰𝘿𝙊𝙉𝘼𝙏𝙀❱",
+#                url=f"https://payu.in/web/B929AE5F10F28A6E751AA02D7458EDEA"
+#            )
+#        ],
     ]
     return buttons
 
@@ -118,12 +118,12 @@ def stream_markup(_, videoid, chat_id):
                 url=f"https://t.me/World_friends_chatting_zone"
             ),
             ],
-        [
-            InlineKeyboardButton(
-                text="❰𝘿𝙊𝙉𝘼𝙏𝙀❱",
-                url=f"https://payu.in/web/B929AE5F10F28A6E751AA02D7458EDEA"
-            )
-        ],
+#        [
+#            InlineKeyboardButton(
+#                text="❰𝘿𝙊𝙉𝘼𝙏𝙀❱",
+#                url=f"https://payu.in/web/B929AE5F10F28A6E751AA02D7458EDEA"
+#            )
+#        ],
     ]
     return buttons
 
