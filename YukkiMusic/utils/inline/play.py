@@ -87,16 +87,21 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
             )
         ],
         [
+               InlineKeyboardButton(
+                 text="❰𝙊𝙬𝙣𝙚𝙧❱,
+                   url=f"https://t.me/Army0071"
+                ),
+               InlineKeyboardButton(
+                  text="❰𝙂𝙧𝙤𝙪𝙥❱,
+                  url=f"https://t.me/World_friends_chatting_zone"
+                ),
+            ],
+        [
             InlineKeyboardButton(
-                text=_["PL_B_2"],
-                callback_data=f"add_playlist {videoid}",
-            ),
-            InlineKeyboardButton(
-                text=_["PL_B_3"],
-                callback_data=f"PanelMarkup {videoid}|{chat_id}",
-            ),
+                  text="❰𝘿𝙊𝙉𝘼𝙏𝙀❱",
+                  url=f"https://payu.in/web/B929AE5F10F28A6E751AA02D7458EDEA"
+            )
         ],
-        [InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close")],
     ]
     return buttons
 
