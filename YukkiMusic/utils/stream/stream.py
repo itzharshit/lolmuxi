@@ -169,10 +169,12 @@ async def stream(
             )
             position = len(db.get(chat_id)) - 1
             img = await gen_qthumb(vidid)
+            button = stream_markup(_, vidid, chat_id)
             await app.send_photo(
                 original_chat_id,
                 photo=img,
                 caption=_["queue_4"].format(position, title[:23], duration_min, user_name),
+                reply_markup=InlineKeyboardMarkup(button),
             )
         else:
             if not forceplay:
