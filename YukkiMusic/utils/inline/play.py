@@ -82,12 +82,6 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
     buttons = [
         [
             InlineKeyboardButton(
-                text=f"{played} {bar} {dur}",
-                callback_data="GetTimer",
-            )
-        ],
-        [
-            InlineKeyboardButton(
                 text="❰𝙊𝙬𝙣𝙚𝙧❱",
                 url=f"https://t.me/Army0071"
             ),
@@ -95,13 +89,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 text="❰𝙂𝙧𝙤𝙪𝙥❱",
                 url=f"https://t.me/World_friends_chatting_zone"
             ),
-            ],
-#        [
-#            InlineKeyboardButton(
-#                text="❰𝘿𝙊𝙉𝘼𝙏𝙀❱",
-#                url=f"https://payu.in/web/B929AE5F10F28A6E751AA02D7458EDEA"
-#            )
-#        ],
+       ],
     ]
     return buttons
 
@@ -117,13 +105,7 @@ def stream_markup(_, videoid, chat_id):
                 text="❰𝙂𝙧𝙤𝙪𝙥❱",
                 url=f"https://t.me/World_friends_chatting_zone"
             ),
-            ],
-#        [
-#            InlineKeyboardButton(
-#                text="❰𝘿𝙊𝙉𝘼𝙏𝙀❱",
-#                url=f"https://payu.in/web/B929AE5F10F28A6E751AA02D7458EDEA"
-#            )
-#        ],
+        ],
     ]
     return buttons
 
@@ -133,9 +115,13 @@ def telegram_markup_timer(_, chat_id, played, dur):
     buttons = [
         [
             InlineKeyboardButton(
-                text=f"{played} {string} {dur}",
-                callback_data="GetTimer",
-            )
+                text="❰𝙊𝙬𝙣𝙚𝙧❱",
+                url=f"https://t.me/Army0071"
+            ),
+            InlineKeyboardButton(
+                text="❰𝙂𝙧𝙤𝙪𝙥❱",
+                url=f"https://t.me/World_friends_chatting_zone"
+            ),
         ],
         [
             InlineKeyboardButton(
