@@ -14,22 +14,6 @@ from pyrogram.types import InlineKeyboardButton
 
 from YukkiMusic.utils.formatters import time_to_seconds
 
-selections = [
-    "▁▄▂▇▄▅▄▅▃",
-    "▁▃▇▂▅▇▄▅▃",
-    "▃▁▇▂▅▃▄▃▅",
-    "▃▄▂▄▇▅▃▅▁",
-    "▁▃▄▂▇▃▄▅▃",
-    "▃▁▄▂▅▃▇▃▅",
-    "▁▇▄▂▅▄▅▃▄",
-    "▁▃▅▇▂▅▄▃▇",
-    "▃▅▂▅▇▁▄▃▁",
-    "▇▅▂▅▃▄▃▁▃",
-    "▃▇▂▅▁▅▄▃▁",
-    "▅▄▇▂▅▂▄▇▁",
-    "▃▅▂▅▃▇▄▅▃",
-]
-
 
 def track_markup(_, videoid, user_id, channel, fplay):
     buttons = [
@@ -54,31 +38,6 @@ def track_markup(_, videoid, user_id, channel, fplay):
 
 
 def stream_markup_timer(_, videoid, chat_id, played, dur):
-    string = random.choice(selections)
-    played_sec = time_to_seconds(played)
-    duration_sec = time_to_seconds(dur)
-    percentage = (played_sec / duration_sec) * 100
-    shit = math.floor(percentage)
-    if 0 < shit <= 10:
-        bar = "◉—————————"
-    elif 10 < shit < 20:
-        bar = "—◉————————"
-    elif 20 <= shit < 30:
-        bar = "——◉———————"
-    elif 30 <= shit < 40:
-        bar = "———◉——————"
-    elif 40 <= shit < 50:
-        bar = "————◉—————"
-    elif 50 <= shit < 60:
-        bar = "—————◉————"
-    elif 60 <= shit < 70:
-        bar = "——————◉———"
-    elif 70 <= shit < 80:
-        bar = "———————◉——"
-    elif 80 <= shit < 95:
-        bar = "————————◉—"
-    else:
-        bar = "—————————◉"
     buttons = [
         [
             InlineKeyboardButton(
@@ -111,7 +70,6 @@ def stream_markup(_, videoid, chat_id):
 
 
 def telegram_markup_timer(_, chat_id, played, dur):
-    string = random.choice(selections)
     buttons = [
         [
             InlineKeyboardButton(
