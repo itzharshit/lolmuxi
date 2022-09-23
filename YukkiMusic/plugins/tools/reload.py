@@ -43,7 +43,7 @@ async def reload_admin_cache(client, message: Message, _):
             if saved > time.time():
                 left = get_readable_time((int(saved) - int(time.time())))
                 return await message.reply_text(
-                    f"𝙔𝙤𝙪 𝙘𝙖𝙣 𝙤𝙣𝙡𝙮 𝙧𝙚𝙛𝙧𝙚𝙨𝙝 𝙖𝙙𝙢𝙞𝙣 𝙘𝙖𝙘𝙝𝙚 𝙞𝙣 𝙚𝙫𝙚𝙧𝙮 5 𝙢𝙞𝙣𝙨.\n\n𝙋𝙡𝙚𝙖𝙨𝙚 𝙩𝙧𝙮 𝙖𝙛𝙩𝙚𝙧 {left}"
+                    f"You can only refresh admin cache in every 5 mins.\n\nPlease try after {left}"
                 )
         admins = await app.get_chat_members(chat_id, filter="administrators")
         authusers = await get_authuser_names(chat_id)
@@ -60,7 +60,7 @@ async def reload_admin_cache(client, message: Message, _):
 
     except:
         await message.reply_text(
-            "𝙁𝙖𝙞𝙡𝙚𝙙 𝙩𝙤 𝙧𝙚𝙡𝙤𝙖𝙙 𝙖𝙙𝙢𝙞𝙣𝙘𝙖𝙘𝙝𝙚. 𝙈𝙖𝙠𝙚 𝙨𝙪𝙧𝙚 𝘽𝙤𝙩 𝙞𝙨 𝙖𝙙𝙢𝙞𝙣 𝙞𝙣 𝙮𝙤𝙪𝙧 𝙘𝙝𝙖𝙩."
+            "Failed to reload admincache. Make sure Bot is admin in your chat."
         )
 
 
@@ -105,7 +105,7 @@ async def restartbot(client, message: Message, _):
             await Yukki.stop_stream_force(chat_id)
         except:
             pass
-    return await mystic.edit_text("𝙎𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮 𝙧𝙚𝙨𝙩𝙖𝙧𝙩𝙚𝙙. 𝙏𝙧𝙮 𝙥𝙡𝙖𝙮𝙞𝙣𝙜 𝙣𝙤𝙬..")
+    return await mystic.edit_text("Successfully restarted. Try playing now..")
 
 
 @app.on_callback_query(filters.regex("close") & ~BANNED_USERS)
@@ -140,13 +140,13 @@ async def stop_download(client, CallbackQuery: CallbackQuery, _):
                 pass
             await CallbackQuery.answer("Downloading Cancelled", show_alert=True)
             return await CallbackQuery.edit_message_text(
-                f"𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 𝘾𝙖𝙣𝙘𝙚𝙡𝙡𝙚𝙙 𝙗𝙮 {CallbackQuery.from_user.mention}"
+                f"Download Cancelled by {CallbackQuery.from_user.mention}"
             )
         except:
             return await CallbackQuery.answer(
-                "𝙁𝙖𝙞𝙡𝙚𝙙 𝙩𝙤 𝙨𝙩𝙤𝙥 𝙩𝙝𝙚 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙞𝙣𝙜.", show_alert=True
+                "Failed to stop the Downloading.", show_alert=True
             )
-    await CallbackQuery.answer("𝙁𝙖𝙞𝙡𝙚𝙙 𝙩𝙤 𝙧𝙚𝙘𝙤𝙜𝙣𝙞𝙯𝙚 𝙩𝙝𝙚 𝙧𝙪𝙣𝙣𝙞𝙣𝙜 𝙩𝙖𝙨𝙠", show_alert=True)
+    await CallbackQuery.answer("Failed to recognize the running task", show_alert=True)
 
 
 @app.on_callback_query(filters.regex("unban_assistant"))
@@ -157,7 +157,7 @@ async def unban_assistant_(_, CallbackQuery):
     a = await app.get_chat_member(int(chat_id), app.id)
     if not a.can_restrict_members:
         return await CallbackQuery.answer(
-            "𝙄 𝙖𝙢 𝙣𝙤𝙩 𝙝𝙖𝙫𝙞𝙣𝙜 𝙗𝙖𝙣/𝙪𝙣𝙗𝙖𝙣 𝙪𝙨𝙚𝙧 𝙥𝙚𝙧𝙢𝙞𝙨𝙨𝙞𝙤𝙣. 𝘼𝙨𝙠 𝙖𝙣𝙮 𝙖𝙙𝙢𝙞𝙣 𝙩𝙤 𝙪𝙣𝙗𝙖𝙣 𝙩𝙝𝙚 𝙖𝙨𝙨𝙞𝙨𝙩𝙖𝙣𝙩.",
+            "I am not having ban/unban user permission. Ask any admin to unban the assistant.",
             show_alert=True,
         )
     else:
