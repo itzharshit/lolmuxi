@@ -56,7 +56,7 @@ async def executor(client, message):
         try:
             await app.send_message(
                 LOG_GROUP_ID,
-                f"{message.from_user.mention} 𝙞𝙨 𝙪𝙨𝙞𝙣𝙜 𝙚𝙫𝙖𝙡 𝙘𝙤𝙢𝙢𝙖𝙣𝙙 𝙣𝙤𝙬 𝙞𝙣 {message.chat.title}\n\n𝘾𝙊𝙈𝙈𝘼𝙉𝘿 :- \n\n{cmd}",
+                f"{message.from_user.mention} is using eval command now in {message.chat.title}\n\nCOMMAND :- \n\n{cmd}",
             )
         except:
             pass
