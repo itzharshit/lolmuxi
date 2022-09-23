@@ -14,6 +14,22 @@ from pyrogram.types import InlineKeyboardButton
 
 from YukkiMusic.utils.formatters import time_to_seconds
 
+selections = [
+    "▁▄▂▇▄▅▄▅▃",
+    "▁▃▇▂▅▇▄▅▃",
+    "▃▁▇▂▅▃▄▃▅",
+    "▃▄▂▄▇▅▃▅▁",
+    "▁▃▄▂▇▃▄▅▃",
+    "▃▁▄▂▅▃▇▃▅",
+    "▁▇▄▂▅▄▅▃▄",
+    "▁▃▅▇▂▅▄▃▇",
+    "▃▅▂▅▇▁▄▃▁",
+    "▇▅▂▅▃▄▃▁▃",
+    "▃▇▂▅▁▅▄▃▁",
+    "▅▄▇▂▅▂▄▇▁",
+    "▃▅▂▅▃▇▄▅▃",
+]
+
 
 def track_markup(_, videoid, user_id, channel, fplay):
     buttons = [
@@ -38,17 +54,49 @@ def track_markup(_, videoid, user_id, channel, fplay):
 
 
 def stream_markup_timer(_, videoid, chat_id, played, dur):
+    string = random.choice(selections)
+    played_sec = time_to_seconds(played)
+    duration_sec = time_to_seconds(dur)
+    percentage = (played_sec / duration_sec) * 100
+    shit = math.floor(percentage)
+    if 0 < shit <= 10:
+        bar = "◉—————————"
+    elif 10 < shit < 20:
+        bar = "—◉————————"
+    elif 20 <= shit < 30:
+        bar = "——◉———————"
+    elif 30 <= shit < 40:
+        bar = "———◉——————"
+    elif 40 <= shit < 50:
+        bar = "————◉—————"
+    elif 50 <= shit < 60:
+        bar = "—————◉————"
+    elif 60 <= shit < 70:
+        bar = "——————◉———"
+    elif 70 <= shit < 80:
+        bar = "———————◉——"
+    elif 80 <= shit < 95:
+        bar = "————————◉—"
+    else:
+        bar = "—————————◉"
     buttons = [
         [
             InlineKeyboardButton(
-                text="❰𝙊𝙬𝙣𝙚𝙧❱",
-                url=f"https://t.me/Army0071"
+                text=f"{played} {bar} {dur}",
+                callback_data="GetTimer",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text=_["PL_B_2"],
+                callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                text="❰𝙂𝙧𝙤𝙪𝙥❱",
-                url=f"https://t.me/World_friends_chatting_zone"
+                text=_["PL_B_3"],
+                callback_data=f"PanelMarkup {videoid}|{chat_id}",
             ),
-       ],
+        ],
+        [InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close")],
     ]
     return buttons
 
@@ -57,29 +105,27 @@ def stream_markup(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="❰𝙊𝙬𝙣𝙚𝙧❱",
-                url=f"https://t.me/Army0071"
+                text=_["PL_B_2"],
+                callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                text="❰𝙂𝙧𝙤𝙪𝙥❱",
-                url=f"https://t.me/World_friends_chatting_zone"
+                text=_["PL_B_3"],
+                callback_data=f"PanelMarkup {videoid}|{chat_id}",
             ),
         ],
+        [InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close")],
     ]
     return buttons
 
 
 def telegram_markup_timer(_, chat_id, played, dur):
+    string = random.choice(selections)
     buttons = [
         [
             InlineKeyboardButton(
-                text="❰𝙊𝙬𝙣𝙚𝙧❱",
-                url=f"https://t.me/Army0071"
-            ),
-            InlineKeyboardButton(
-                text="❰𝙂𝙧𝙤𝙪𝙥❱",
-                url=f"https://t.me/World_friends_chatting_zone"
-            ),
+                text=f"{played} {string} {dur}",
+                callback_data="GetTimer",
+            )
         ],
         [
             InlineKeyboardButton(
