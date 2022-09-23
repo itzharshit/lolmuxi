@@ -47,7 +47,7 @@ async def playback(cli, message: Message, _, chat_id):
         return await message.reply_text(_["admin_35"])
     upl = speed_markup(_, chat_id)
     return await message.reply_text(
-        "**𝙀𝙝𝙨𝙖𝙖𝙨 𝙋𝙡𝙖𝙮𝘽𝙖𝙘𝙠 𝙎𝙥𝙚𝙚𝙙 𝙋𝙖𝙣𝙚𝙡**\n\n𝘾𝙡𝙞𝙘𝙠 𝙤𝙣 𝙩𝙝𝙚 𝙗𝙪𝙩𝙩𝙤𝙣𝙨 𝙗𝙚𝙡𝙤𝙬 𝙩𝙤 𝙘𝙝𝙖𝙣𝙜𝙚 𝙩𝙝𝙚 𝙨𝙥𝙚𝙚𝙙 𝙤𝙛 𝙘𝙪𝙧𝙧𝙚𝙣𝙩𝙡𝙮 𝙥𝙡𝙖𝙮𝙞𝙣𝙜 𝙢𝙪𝙨𝙞𝙘 𝙤𝙣 𝙫𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩..",
+        "**Yukki PlayBack Speed Panel**\n\nClick on the buttons below to change the speed of currently playing music on voice chat..",
         reply_markup=upl,
     )
 
@@ -85,18 +85,18 @@ async def del_back_playlist(client, CallbackQuery, _):
             if str(speed) == str("1.0"):
                 speed = "Normal"
             return await CallbackQuery.answer(
-                f"𝙎𝙤𝙧𝙧𝙮 ! 𝘽𝙪𝙩 𝙗𝙤𝙩 𝙞𝙨 𝙖𝙡𝙧𝙚𝙖𝙙𝙮 𝙥𝙡𝙖𝙮𝙞𝙣𝙜 𝙤𝙣 {speed} 𝙨𝙥𝙚𝙚𝙙.\n\n𝙎𝙚𝙡𝙚𝙘𝙩 𝙖𝙣𝙮 𝙤𝙩𝙝𝙚𝙧 𝙨𝙥𝙚𝙚𝙙.",
+                f"Sorry ! But bot is already playing on {speed} speed.\n\nSelect any other speed.",
                 show_alert=True,
             )
     else:
         if str(speed) == str("1.0"):
             return await CallbackQuery.answer(
-                f"𝙎𝙤𝙧𝙧𝙮! 𝘽𝙪𝙩 𝙗𝙤𝙩 𝙞𝙨 𝙖𝙡𝙧𝙚𝙖𝙙𝙮 𝙥𝙡𝙖𝙮𝙞𝙣𝙜 𝙤𝙣 𝙉𝙤𝙧𝙢𝙖𝙡 𝙎𝙥𝙚𝙚𝙙.\n\n𝙎𝙚𝙡𝙚𝙘𝙩 𝙖𝙣𝙮 𝙤𝙩𝙝𝙚𝙧 𝙨𝙥𝙚𝙚𝙙.",
+                f"Sorry! But bot is already playing on Normal Speed.\n\nSelect any other speed.",
                 show_alert=True,
             )
     if chat_id in checker:
         return await CallbackQuery.answer(
-            "𝙏𝙝𝙚𝙧𝙚 𝙝𝙖𝙨 𝙗𝙚𝙚𝙣 𝙖 𝙘𝙤𝙣𝙫𝙚𝙧𝙨𝙞𝙤𝙣 𝙤𝙛 𝙨𝙥𝙚𝙚𝙙 𝙖𝙡𝙧𝙚𝙖𝙙𝙮 𝙜𝙤𝙞𝙣𝙜 𝙤𝙣. 𝙋𝙡𝙚𝙖𝙨𝙚 𝙬𝙖𝙞𝙩 𝙛𝙤𝙧 𝙞𝙩 𝙩𝙤 𝙜𝙚𝙩 𝙘𝙤𝙢𝙥𝙡𝙚𝙩𝙚𝙙 𝙛𝙞𝙧𝙨𝙩",
+            "There has been a conversion of speed already going on. Please wait for it to get completed first",
             show_alert=True,
         )
     else:
@@ -107,7 +107,7 @@ async def del_back_playlist(client, CallbackQuery, _):
         pass
     mystic = await app.send_message(
         CallbackQuery.message.chat.id,
-        text=f"𝙋𝙡𝙚𝙖𝙨𝙚 𝙒𝙖𝙞𝙩... 𝘽𝙤𝙩 𝙞𝙨 𝙩𝙧𝙮𝙞𝙣𝙜 𝙩𝙤 𝙘𝙝𝙖𝙣𝙜𝙚 𝙨𝙥𝙚𝙚𝙙 𝙤𝙛 𝙩𝙧𝙖𝙘𝙠. 𝙏𝙝𝙞𝙨 𝙘𝙤𝙪𝙡𝙙 𝙩𝙖𝙠𝙚 𝙨𝙤𝙢𝙚 𝙩𝙞𝙢𝙚 𝙙𝙚𝙥𝙚𝙣𝙙𝙞𝙣𝙜 𝙪𝙥𝙤𝙣 𝙛𝙞𝙡𝙚 𝙨𝙞𝙯𝙚.\n\n𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝙗𝙮: {CallbackQuery.from_user.mention}",
+        text=f"Please Wait... Bot is trying to change speed of track. This could take some time depending upon file size.\n\nRequested by: {CallbackQuery.from_user.mention}",
     )
     try:
         await Yukki.speedup_stream(
@@ -120,9 +120,9 @@ async def del_back_playlist(client, CallbackQuery, _):
         print(e)
         if chat_id in checker:
             checker.remove(chat_id)
-        return await mystic.edit_text("𝙁𝙖𝙞𝙡𝙚𝙙 𝙩𝙤 𝙘𝙝𝙖𝙣𝙜𝙚 𝙨𝙥𝙚𝙚𝙙. 𝙎𝙤𝙧𝙧𝙮😭")
+        return await mystic.edit_text("Failed to change speed. Sorry😭")
     if chat_id in checker:
         checker.remove(chat_id)
     await mystic.edit_text(
-        f"𝙎𝙪𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮 𝙘𝙝𝙖𝙣𝙜𝙚𝙙 𝙨𝙥𝙚𝙚𝙙 𝙤𝙛 𝙘𝙪𝙧𝙧𝙚𝙣𝙩𝙡𝙮 𝙥𝙡𝙖𝙮𝙞𝙣𝙜 𝙢𝙪𝙨𝙞𝙘 𝙩𝙤 **{speed}x**\n\n𝗖𝗵𝗮𝗻𝗴𝗲𝗱 𝗯𝘆 : {CallbackQuery.from_user.mention}"
+        f"Sucessfully changed speed of currently playing music to **{speed}x**\n\nChanged by : {CallbackQuery.from_user.mention}"
     )
