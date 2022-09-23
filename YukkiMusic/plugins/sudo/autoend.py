@@ -30,10 +30,10 @@ async def auto_end_stream(client, message):
     if state == "enable":
         await autoend_on()
         await message.reply_text(
-            "𝘼𝙪𝙩𝙤 𝙀𝙣𝙙 𝙎𝙩𝙧𝙚𝙖𝙢 𝙀𝙣𝙖𝙗𝙡𝙚𝙙.\n\n𝘽𝙤𝙩 𝙬𝙞𝙡𝙡 𝙡𝙚𝙖𝙫𝙚 𝙫𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩 𝙖𝙪𝙩𝙤𝙢𝙖𝙩𝙞𝙘𝙖𝙡𝙡𝙮 𝙖𝙛𝙩𝙚𝙧 3 𝙢𝙞𝙣𝙨 𝙞𝙛 𝙣𝙤 𝙤𝙣𝙚 𝙞𝙨 𝙡𝙞𝙨𝙩𝙚𝙣𝙞𝙣𝙜 𝙬𝙞𝙩𝙝 𝙖 𝙬𝙖𝙧𝙣𝙞𝙣𝙜 𝙢𝙚𝙨𝙨𝙖𝙜𝙚.."
+            "Auto End Stream Enabled.\n\nBot will leave voice chat automatically after 3 mins if no one is listening with a warning message.."
         )
     elif state == "disable":
         await autoend_off()
-        await message.reply_text("𝘼𝙪𝙩𝙤 𝙀𝙣𝙙 𝙎𝙩𝙧𝙚𝙖𝙢 𝘿𝙞𝙨𝙖𝙗𝙡𝙚𝙙.")
+        await message.reply_text("Auto End Stream Disabled.")
     else:
         await message.reply_text(usage)

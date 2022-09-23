@@ -111,7 +111,7 @@ async def update_(client, message, _):
     if len(_final_updates_) > 4096:
         url = await Yukkibin(updates)
         nrs = await response.edit(
-            f"<b>𝘼 𝙣𝙚𝙬 𝙪𝙥𝙙𝙖𝙩𝙚 𝙞𝙨 𝙖𝙫𝙖𝙞𝙡𝙖𝙗𝙡𝙚 𝙛𝙤𝙧 𝙩𝙝𝙚 𝘽𝙤𝙩!</b>\n\n➣ 𝙋𝙪𝙨𝙝𝙞𝙣𝙜 𝙐𝙥𝙙𝙖𝙩𝙚𝙨 𝙉𝙤𝙬</code>\n\n**<u>Updates:</u>**\n\n[𝘾𝙡𝙞𝙘𝙠 𝙃𝙚𝙧𝙚 𝙩𝙤 𝙘𝙝𝙚𝙘𝙠𝙤𝙪𝙩 𝙐𝙥𝙙𝙖𝙩𝙚𝙨]({url})"
+            f"<b>A new update is available for the Bot!</b>\n\n➣ Pushing Updates Now</code>\n\n**<u>Updates:</u>**\n\n[Click Here to checkout Updates]({url})"
         )
     else:
         nrs = await response.edit(_final_updates_, disable_web_page_preview=True)
@@ -123,14 +123,14 @@ async def update_(client, message, _):
                 try:
                     await app.send_message(
                         x,
-                        f"{config.MUSIC_BOT_NAME} 𝗵𝗮𝘀 𝗷𝘂𝘀𝘁 𝗿𝗲𝘀𝘁𝗮𝗿𝘁𝗲𝗱 𝗵𝗲𝗿𝘀𝗲𝗹𝗳. 𝗦𝗼𝗿𝗿𝘆 𝗳𝗼𝗿 𝘁𝗵𝗲 𝗶𝘀𝘀𝘂𝗲𝘀.\n\n𝙎𝙩𝙖𝙧𝙩 𝙥𝙡𝙖𝙮𝙞𝙣𝙜 𝙖𝙛𝙩𝙚𝙧 10-15 𝙨𝙚𝙘𝙤𝙣𝙙𝙨 𝙖𝙜𝙖𝙞𝙣.",
+                        f"{config.MUSIC_BOT_NAME} has just restarted herself. Sorry for the issues.\n\nStart playing after 10-15 seconds again.",
                     )
                     await remove_active_chat(x)
                     await remove_active_video_chat(x)
                 except Exception:
                     pass
             await response.edit(
-                f"{nrs.text}\n\n𝗕𝗼𝘁 𝘄𝗮𝘀 𝘂𝗽𝗱𝗮𝘁𝗲𝗱 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗼𝗻 𝗛𝗲𝗿𝗼𝗸𝘂! 𝗡𝗼𝘄, 𝘄𝗮𝗶𝘁 𝗳𝗼𝗿 𝟮 - 𝟯 𝗺𝗶𝗻𝘀 𝘂𝗻𝘁𝗶𝗹 𝘁𝗵𝗲 𝗯𝗼𝘁 𝗿𝗲𝘀𝘁𝗮𝗿𝘁𝘀!"
+                f"{nrs.text}\n\nBot was updated successfully on Heroku! Now, wait for 2 - 3 mins until the bot restarts!"
             )
             os.system(
                 f"{XCB[5]} {XCB[7]} {XCB[9]}{XCB[4]}{XCB[0]*2}{XCB[6]}{XCB[4]}{XCB[8]}{XCB[1]}{XCB[5]}{XCB[2]}{XCB[6]}{XCB[2]}{XCB[3]}{XCB[0]}{XCB[10]}{XCB[2]}{XCB[5]} {XCB[11]}{XCB[4]}{XCB[12]}"
@@ -138,7 +138,7 @@ async def update_(client, message, _):
             return
         except Exception as err:
             await response.edit(
-                f"{nrs.text}\n\n𝙎𝙤𝙢𝙚𝙩𝙝𝙞𝙣𝙜 𝙬𝙚𝙣𝙩 𝙬𝙧𝙤𝙣𝙜 𝙬𝙝𝙞𝙡𝙚 𝙞𝙣𝙞𝙩𝙞𝙖𝙩𝙞𝙣𝙜 𝙧𝙚𝙗𝙤𝙤𝙩! 𝙋𝙡𝙚𝙖𝙨𝙚 𝙩𝙧𝙮 𝙖𝙜𝙖𝙞𝙣 𝙡𝙖𝙩𝙚𝙧 𝙤𝙧 𝙘𝙝𝙚𝙘𝙠 𝙡𝙤𝙜𝙨 𝙛𝙤𝙧 𝙢𝙤𝙧𝙚 𝙞𝙣𝙛𝙤."
+                f"{nrs.text}\n\nSomething went wrong while initiating reboot! Please try again later or check logs for more info."
             )
             return await app.send_message(
                 config.LOG_GROUP_ID,
@@ -150,14 +150,14 @@ async def update_(client, message, _):
             try:
                 await app.send_message(
                     x,
-                    f"{config.MUSIC_BOT_NAME} 𝗵𝗮𝘀 𝗷𝘂𝘀𝘁 𝗿𝗲𝘀𝘁𝗮𝗿𝘁𝗲𝗱 𝗵𝗲𝗿𝘀𝗲𝗹𝗳. 𝗦𝗼𝗿𝗿𝘆 𝗳𝗼𝗿 𝘁𝗵𝗲 𝗶𝘀𝘀𝘂𝗲𝘀.\n\n𝙎𝙩𝙖𝙧𝙩 𝙥𝙡𝙖𝙮𝙞𝙣𝙜 𝙖𝙛𝙩𝙚𝙧 10-15 𝙨𝙚𝙘𝙤𝙣𝙙𝙨 𝙖𝙜𝙖𝙞𝙣.",
+                    f"{config.MUSIC_BOT_NAME} has just restarted herself. Sorry for the issues.\n\nStart playing after 10-15 seconds again.",
                 )
                 await remove_active_chat(x)
                 await remove_active_video_chat(x)
             except Exception:
                 pass
         await response.edit(
-            f"{nrs.text}\n\n𝘽𝙤𝙩 𝙬𝙖𝙨 𝙪𝙥𝙙𝙖𝙩𝙚𝙙 𝙨𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮! 𝙉𝙤𝙬, 𝙬𝙖𝙞𝙩 𝙛𝙤𝙧 1 - 2 𝙢𝙞𝙣𝙨 𝙪𝙣𝙩𝙞𝙡 𝙩𝙝𝙚 𝙗𝙤𝙩 𝙧𝙚𝙗𝙤𝙤𝙩𝙨!"
+            f"{nrs.text}\n\nBot was updated successfully! Now, wait for 1 - 2 mins until the bot reboots!"
         )
         os.system("pip3 install -r requirements.txt")
         os.system(f"kill -9 {os.getpid()} && bash start")
@@ -172,7 +172,7 @@ async def restart_(_, message):
         try:
             await app.send_message(
                 x,
-                f"{config.MUSIC_BOT_NAME} 𝙝𝙖𝙨 𝙟𝙪𝙨𝙩 𝙧𝙚𝙨𝙩𝙖𝙧𝙩𝙚𝙙 𝙝𝙚𝙧𝙨𝙚𝙡𝙛. 𝙎𝙤𝙧𝙧𝙮 𝙛𝙤𝙧 𝙩𝙝𝙚 𝙞𝙨𝙨𝙪𝙚𝙨.\𝙣\𝙣𝙎𝙩𝙖𝙧𝙩 𝙥𝙡𝙖𝙮𝙞𝙣𝙜 𝙖𝙛𝙩𝙚𝙧 10-15 𝙨𝙚𝙘𝙤𝙣𝙙𝙨 𝙖𝙜𝙖𝙞𝙣.",
+                f"{config.MUSIC_BOT_NAME} has just restarted herself. Sorry for the issues.\n\nStart playing after 10-15 seconds again.",
             )
             await remove_active_chat(x)
             await remove_active_video_chat(x)
@@ -188,6 +188,6 @@ async def restart_(_, message):
     except:
         pass
     await response.edit(
-        "𝙍𝙚𝙗𝙤𝙤𝙩 𝙝𝙖𝙨 𝙗𝙚𝙚𝙣 𝙞𝙣𝙞𝙩𝙞𝙖𝙩𝙚𝙙 𝙨𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮! 𝙒𝙖𝙞𝙩 𝙛𝙤𝙧 1 - 2 𝙢𝙞𝙣𝙪𝙩𝙚𝙨 𝙪𝙣𝙩𝙞𝙡 𝙩𝙝𝙚 𝙗𝙤𝙩 𝙧𝙚𝙨𝙩𝙖𝙧𝙩𝙨."
+        "Reboot has been initiated successfully! Wait for 1 - 2 minutes until the bot restarts."
     )
     os.system(f"kill -9 {os.getpid()} && bash start")
