@@ -52,4 +52,4 @@ async def get_topz_playlists(client, CallbackQuery, _):
 @app.on_callback_query(filters.regex("SERVERTOP") & ~BANNED_USERS)
 @languageCB
 async def server_to_play(client, CallbackQuery, _):
-    await CallbackQuery.answer("𝙏𝙝𝙞𝙨 𝙛𝙚𝙖𝙩𝙪𝙧𝙚 𝙞𝙨 𝙘𝙪𝙧𝙧𝙚𝙣𝙩𝙡𝙮 𝙙𝙞𝙨𝙖𝙗𝙡𝙚𝙙!", show_alert=True)
+    await CallbackQuery.answer("This feature is currently disabled!", show_alert=True)
