@@ -26,7 +26,7 @@ def AdminRightsCheck(mystic):
         if await is_maintenance() is False:
             if message.from_user.id not in SUDOERS:
                 return await message.reply_text(
-                    "𝘽𝙤𝙩 𝙞𝙨 𝙪𝙣𝙙𝙚𝙧 𝙢𝙖𝙞𝙣𝙩𝙚𝙣𝙖𝙣𝙘𝙚. 𝙋𝙡𝙚𝙖𝙨𝙚 𝙬𝙖𝙞𝙩 𝙛𝙤𝙧 𝙨𝙤𝙢𝙚 𝙩𝙞𝙢𝙚..."
+                    "Bot is under maintenance. Please wait for some time..."
                 )
         if await is_commanddelete_on(message.chat.id):
             try:
@@ -74,10 +74,9 @@ def AdminRightsCheck(mystic):
                             upvote = await get_upvote_count(chat_id)
                             text = f"""**Admin Right Needed**
 
-𝙄𝙛 𝙮𝙤𝙪'𝙧𝙚 𝙖𝙡𝙧𝙚𝙖𝙙𝙮 𝙖𝙣 𝙖𝙙𝙢𝙞𝙣 , 𝙧𝙚𝙡𝙤𝙖𝙙 𝙖𝙙𝙢𝙞𝙣𝙡𝙞𝙨𝙩 : /admincache
+If you're already an admin , reload adminlist : /admincache
 
-𝙄𝙛 𝙩𝙝𝙞𝙨 𝙜𝙚𝙩𝙨 𝙖 𝙩𝙤𝙩𝙖𝙡 𝙤𝙛 **{upvote}** 𝙪𝙥𝙫𝙤𝙩𝙚𝙨, 𝘽𝙤𝙩 𝙬𝙞𝙡𝙡 𝙥𝙚𝙧𝙛𝙤𝙧𝙢 𝙩𝙝𝙚 𝙖𝙘𝙩𝙞𝙤𝙣 𝙗𝙮 𝙞𝙩𝙨𝙚𝙡𝙛. 𝘼𝙙𝙢𝙞𝙣𝙨 𝙘𝙖𝙣 𝙙𝙞𝙨𝙖𝙗𝙡𝙚 𝙩𝙝𝙞𝙨 𝙫𝙤𝙩𝙞𝙣𝙜 𝙢𝙤𝙙𝙚 𝙛𝙧𝙤𝙢 𝙨𝙚𝙩𝙩𝙞𝙣𝙜𝙨
-."""
+If this gets a total of **{upvote}** upvotes, Bot will perform the action by itself. Admins can disable this voting mode from settings."""
 
                             command = message.command[0]
                             if command[0] == "c":
@@ -121,7 +120,7 @@ def AdminActual(mystic):
         if await is_maintenance() is False:
             if message.from_user.id not in SUDOERS:
                 return await message.reply_text(
-                    "𝘽𝙤𝙩 𝙞𝙨 𝙪𝙣𝙙𝙚𝙧 𝙢𝙖𝙞𝙣𝙩𝙚𝙣𝙖𝙣𝙘𝙚. 𝙋𝙡𝙚𝙖𝙨𝙚 𝙬𝙖𝙞𝙩 𝙛𝙤𝙧 𝙨𝙤𝙢𝙚 𝙩𝙞𝙢𝙚..."
+                    "Bot is under maintenance. Please wait for some time..."
                 )
         if await is_commanddelete_on(message.chat.id):
             try:
@@ -162,7 +161,7 @@ def ActualAdminCB(mystic):
         if await is_maintenance() is False:
             if CallbackQuery.from_user.id not in SUDOERS:
                 return await CallbackQuery.answer(
-                    "𝘽𝙤𝙩 𝙞𝙨 𝙪𝙣𝙙𝙚𝙧 𝙢𝙖𝙞𝙣𝙩𝙚𝙣𝙖𝙣𝙘𝙚. 𝙋𝙡𝙚𝙖𝙨𝙚 𝙬𝙖𝙞𝙩 𝙛𝙤𝙧 𝙨𝙤𝙢𝙚 𝙩𝙞𝙢𝙚...",
+                    "Bot is under maintenance. Please wait for some time...",
                     show_alert=True,
                 )
         try:
